@@ -1,20 +1,20 @@
 
 const getAllTasks = (req, res)=>{
-    res.send("all items")
+    res.json({"message":"get all tasks"})
 }
 
 const createTask = (req, res)=>{
-    res.send("create task")
+    res.json({"message":"create task"})
 }
 const getTask = (req, res)=>{
-    res.send("get task")
+    res.json({"id":req.params.id})
 }
 
 const updateTask = (req, res)=>{
-    res.send("update task")
+    res.json({"message":"update task"})
 }
 const deleteTask = (req, res)=>{
-    res.send("delete task")
+    res.json({"message":"deleted"})
 }
 
 
