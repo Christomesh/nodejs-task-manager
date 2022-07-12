@@ -10,7 +10,4 @@ const createCustomError = (msg, statusCode) =>{
     return new CustomErrorAPI(msg, statusCode)
 }
 
-module.exports = {
-    createCustomError,
-    CustomErrorAPI
-}
+module.exports = {createCustomError, CustomErrorAPI }
