@@ -4,17 +4,15 @@ const tasks = require('./routes/tasks')
 const connectDB = require('./db/connect')
 require('dotenv').config()
 
+// middleware
 app.use(express.json())
-
-app.get('/hello', (req, res)=>{
-    res.send("Task Manager App")
-})
+app.use(express.static("./public"))
 
 
 app.use('/api/v1/tasks', tasks)
 
 // Spin up server
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const start = async () =>{
     try {
